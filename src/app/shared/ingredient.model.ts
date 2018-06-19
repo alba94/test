@@ -6,4 +6,5 @@ export class Ingredinet {
       this.name = name;
       this.amount = amount;
   }
+
 }

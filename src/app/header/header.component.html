@@ -3,21 +3,21 @@
     <div class="navbar-header">
       <a href="#" class="navbar-brand">Recipe Book</a>
     </div>
-
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-          <li><a href="#" (click)="onSelect('shoppingList')" >Shopping List</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['/recipes']">Recipes</a></li>
+          <li routerLinkActive="active"><a [routerLink]="['/shoppping-list']" >Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
+        <li class="dropdown" appDropdown>
           <a href="#" class="dropdown-toggle" role="dropdown">Manage</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetech Data</a></li>
+            <li><a (click)="onLoad()">Save Data</a></li>
+            <li><a >Fetech Data</a></li>
           </ul>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
