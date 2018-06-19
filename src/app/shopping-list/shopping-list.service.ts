@@ -26,8 +26,28 @@ getIngredients() {
  return this.ingredients.slice();
 }
 
+getIngredient(index: number) {
+  return this.ingredients[index];
+ }
+
+ addIngredient(ingredient: Ingredinet) {
+  this.ingredients.push(ingredient);
+  this.ingrdientChange.next(this.ingredients.slice());
+  }
+
 addIngredients(ingredient: Ingredinet[]) {
 this.ingredients.push(...ingredient);
 this.ingrdientChange.next(this.ingredients.slice());
+}
+
+deleteIngredient(index: number) {
+  this.ingredients.splice(index, 1);
+  this.ingrdientChange.next(this.ingredients.slice());
+}
+
+updateIngredient(index: number, newIngred: Ingredinet) {
+  this.ingredients[index] = newIngred;
+  this.ingrdientChange.next(this.ingredients.slice());
+
 }
 }
