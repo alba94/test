@@ -7,7 +7,7 @@ import { Subject } from 'rxjs';
 })
 export class ShoppingListService {
 ingrdientChange = new Subject<Ingredinet[]>();
-public startEdit = new Subject<number>();
+startEdit = new Subject<number>();
 
   private ingredients: Ingredinet[] = [
     new Ingredinet('Apple', 5),

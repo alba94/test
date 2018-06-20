@@ -37,23 +37,23 @@ editedItem: Ingredinet;
   onAdditem() {
       const value = this.form.value;
       const newIng = new Ingredinet(value.name, value.amount);
-      this.slService.OnIngredientAdded(newIng);
       if (this.editMode) {
+
 this.slService.updateIngredient(this.editIndex, newIng);
       } else {
-this.slService.addIngredient(newIng);
+        this.slService.OnIngredientAdded(newIng);
       }
       this.editMode = false;
-
   }
 
   reset() {
+    this.editMode = false;
     return this.form.reset();
   }
 
   deleteIt() {
     this.slService.deleteIngredient(this.editIndex);
-this.reset();
+    this.reset();
   }
 
   ngOnDestroy(): void {

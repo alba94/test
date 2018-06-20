@@ -27,4 +27,7 @@ export class RecipeDetailComponent implements OnInit {
 this.recipeService.adIngredientsToShoppingList(this.recipe.ingredient);
   }
 
+  editThis() {
+  }
+
 }

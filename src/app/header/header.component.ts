@@ -14,8 +14,4 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
-onLoad() {
-  this.router.navigate(['shoppping-list']);
- }
 }
