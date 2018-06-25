@@ -30,16 +30,14 @@ editedItem: Ingredinet;
         name: this.editedItem.name,
         amount: this.editedItem.amount
       });
-      }
-    );
+      });
   }
 
   onAdditem() {
       const value = this.form.value;
       const newIng = new Ingredinet(value.name, value.amount);
       if (this.editMode) {
-
-this.slService.updateIngredient(this.editIndex, newIng);
+        this.slService.updateIngredient(this.editIndex, newIng);
       } else {
         this.slService.OnIngredientAdded(newIng);
       }

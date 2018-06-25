@@ -4,9 +4,11 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { Routes, RouterModule } from '@angular/router';
 import { RecipeDetailComponent } from './recipe/recipe-detail/recipe-detail.component';
 import { RecipeStartComponent } from './recipe/recipe-start/recipe-start.component';
+import { HomeComponent } from './core/home/home.component';
+
 
 const route: Routes = [
-  {path: '', redirectTo: '/recipes' , pathMatch: 'full'},
+  {path: '', redirectTo: '/home' , pathMatch: 'full'},
   {path: 'recipes',
   component: RecipeComponent, children: [
     {
@@ -14,8 +16,8 @@ const route: Routes = [
     },
     {path: ':id', component: RecipeDetailComponent}
   ] },
-  {path: 'shoppping-list',
-  component: ShoppingListComponent}
+  {path: 'shoppping-list', component: ShoppingListComponent},
+  {path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

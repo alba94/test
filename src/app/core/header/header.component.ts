@@ -8,8 +8,6 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() featureSelected = new EventEmitter<string>();
-
   constructor(private router: Router) { }
 
   ngOnInit() {

@@ -2,12 +2,9 @@ import { Injectable } from '@angular/core';
 import { Ingredinet } from '../shared/ingredient.model';
 import { Subject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class ShoppingListService {
-ingrdientChange = new Subject<Ingredinet[]>();
-startEdit = new Subject<number>();
+public ingrdientChange = new Subject<Ingredinet[]>();
+public startEdit = new Subject<number>();
 
   private ingredients: Ingredinet[] = [
     new Ingredinet('Apple', 5),
@@ -19,7 +16,6 @@ startEdit = new Subject<number>();
   OnIngredientAdded(ingredient: Ingredinet) {
     this.ingredients.push(ingredient);
     this.ingrdientChange.next(this.ingredients.slice());
-    console.log(ingredient.name);
 }
 
 getIngredients() {
