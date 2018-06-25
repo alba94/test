@@ -14,12 +14,14 @@ import { RecipeModule } from './recipe/recipe.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './core/header/header.component';
+import { ProgressComponent } from './progress/progress.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProgressComponent
   ],
   imports: [
     BrowserModule,
